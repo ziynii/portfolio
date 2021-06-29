@@ -13,6 +13,8 @@
 	--color-blue: #73aace;
 	--color-yellow: #fff7d1;
 	--color-orange: #feb546;
+	--color-purple: #e0d9fc;
+	--color-dark-purple: #a280d6;
 	--color-black: #000000;
 
 	/* Font size */
@@ -90,12 +92,21 @@ h3 {
 
 /* Navbar */
 #navbar {
+	width: 100%;
+	position: fixed;
+	top: 0;
 	display: flex;
 	justify-content: space-between;
-	background-color: var(--color-pink);
+	background-color: transparent;
 	align-items: center;
-	color: var(--color-white);
+	color: var(--color-dark-grey);
 	padding: 16px;
+	transition: all var(--animation-duration) ease-in;
+}
+
+#navbar.navbar--dark {
+	background-color: var(--color-dark-purple);
+	padding: 4px;
 }
 
 .navbar__menu {
@@ -115,7 +126,7 @@ h3 {
 }
 
 .navbar__menu__item:hover {
-	background-color: var(--color-dark-pink);
+	background-color: var(--color-purple);
 }
 
 .navbar__toggle-btn {
@@ -132,6 +143,7 @@ h3 {
 #home {
 	background: url("imgs/home_backimg.png") center/cover no-repeat;
 	padding: 40px;
+	padding-top: 100px;
 	text-align: center;
 }
 
