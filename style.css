@@ -118,6 +118,15 @@ h3 {
 	background-color: var(--color-dark-pink);
 }
 
+.navbar__toggle-btn {
+	position: absolute;
+	right: 32px;
+	top: 36px;
+	font-size: 24px;
+	color: var(--color-white);
+	display: none;
+}
+
 
 /* Home */
 #home {
@@ -404,4 +413,39 @@ h3 {
 .contact__links i:hover {
 	transform: scale(1.1);
 	color: var(--color-yellow);
+}
+
+/* For 768px screeen width */
+@media screen and (max-width:768px) {
+	.navbar__toggle-btn {
+		display: block;
+	}
+
+	#navbar {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.navbar__menu {
+		flex-direction: column;
+		text-align: center;
+		width: 100%;
+		display: none;
+	}
+
+	.about__majors {
+		flex-direction: column;
+	}
+
+	.major {
+		margin-bottom: 38px;
+	}
+
+	.skillset {
+		flex-direction: column;
+	}
+
+	.project {
+		flex-grow: 1;
+	}
 }
