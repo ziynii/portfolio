@@ -27,10 +27,24 @@ navbarMenu.addEventListener('click', (event) => {
 // 홈의'contact me' 클릭시 contact 메뉴로 이동
 const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => {
-	scrollIntoView('#contact')
+	scrollIntoView('#contact');
 });
+
+
+// 스크롤시 home의 배경 투명도 조절
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+	home.style.opacity = 1 - window.scrollY / homeHeight
+})
+
+
+
+
 
 function scrollIntoView(selector) {
 	const scrollTo = document.querySelector(selector);
 	scrollTo.scrollIntoView({behavior: 'smooth'});
 }
+
+
