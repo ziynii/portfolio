@@ -65,6 +65,7 @@ button {
 	cursor: pointer;
 	border: none;
 	outline: none;
+	padding: 0;
 }
 
 /* Typography */
@@ -166,6 +167,10 @@ h3 {
 	padding: 8px 12px;
 	border: 2px solid var(--color-white);
 	border-radius: var(--size-border-radius);
+}
+
+.home__contact:hover {
+	background-color: var(--color-pink);
 }
 
 /* Section common */
@@ -310,6 +315,7 @@ h3 {
 	border-radius: var(--size-border-radius);
 	font-size: var(--font-regular);
 	padding: 8px 48px;
+	position: relative;
 }
 
 .category__btn.selected,
@@ -326,9 +332,9 @@ h3 {
 	background-color: var(--color-orange);
 	border-radius: 50%;
 	color: var(--color-white);
-	position: relative;
+	position: absolute;
 	top: -20px;
-	left: 4px;
+	right: 16px;
 	opacity: 0;
 	transition: all var(--animation-duration) ease-in
 }
@@ -460,8 +466,21 @@ h3 {
 
 /* For 768px screeen width */
 @media screen and (max-width:768px) {
+	:root {
+		/* Font size */
+		--font-large: 30px;
+		--font-medium: 18px;
+		--font-regular: 16px;
+		--font-samll: 14px;
+		--font-micro: 12px;
+	}
 	.navbar__toggle-btn {
 		display: block;
+	}
+
+	.section {
+		padding: 16px;
+		padding-top: 65px;
 	}
 
 	#navbar {
@@ -483,17 +502,32 @@ h3 {
 
 	.about__majors {
 		flex-direction: column;
+		margin-top: 30px;
+		margin-bottom: 0;
 	}
 
 	.major {
-		margin-bottom: 38px;
+		margin-bottom: 30px;
 	}
 
 	.skillset {
 		flex-direction: column;
 	}
 
+	.category__btn {
+		width: 100%;
+		margin: 4px 0;
+	}
+
 	.project {
 		flex-grow: 1;
+	}
+
+	.arrow-up {
+		width: 50px;
+		height: 50px;
+		font-size: 30px;
+		bottom: 16px;
+		right: 16px;
 	}
 }
