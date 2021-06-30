@@ -20,8 +20,15 @@ navbarMenu.addEventListener('click', (event) => {
 	if (link == null) {
 		return;
 	}
+	navbarMenu.classList.remove('open');
 	scrollIntoView(link)
 });
+
+// Navbar toggle
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+	navbarMenu.classList.toggle('open');
+})
 
 
 // 홈의'contact me' 클릭시 contact 메뉴로 이동
