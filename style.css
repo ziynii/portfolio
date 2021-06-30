@@ -102,6 +102,7 @@ h3 {
 	color: var(--color-dark-grey);
 	padding: 16px;
 	transition: all var(--animation-duration) ease-in;
+	z-index: 1;
 }
 
 #navbar.navbar--dark {
