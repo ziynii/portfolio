@@ -62,6 +62,14 @@ workBtnContainer.addEventListener('click', (e) => {
 	if (filter == null) {
 		return;
 	}
+
+	// 선택된 아이템에 active 부여
+	const active = document.querySelector('.category__btn.selected');
+	active.classList.remove('selected');
+	const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+	target.classList.add('selected');
+
+
 	projectContainer.classList.add('ani-out');
 	setTimeout(() => {
 		projects.forEach((project) => {
@@ -73,8 +81,7 @@ workBtnContainer.addEventListener('click', (e) => {
 		});
 		projectContainer.classList.remove('ani-out');
 	}, 300);
-
-})
+});
 
 
 function scrollIntoView(selector) {
